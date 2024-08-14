@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Range</title>
+</head>
+
+<body style="font-size: 50px; color: white; background-color: black;">
+
+    <script>
+
+        let range = prompt("Enter The Temperatures =>")
+
+        if (range <= 32) {
+            document.write("Temperatures is 'Freezing' ")
+        } else if (range > 32 && range <= 50) {
+            document.write("Temperatures is 'Cold' ")
+        } else if (range >= 51 && range <= 75) {
+            document.write("Temperatures is 'Moderate' ")
+        } else if (range >= 75) {
+            document.write("Temperatures is 'Hot' ")
+        } else {
+            document.write("Temperatures is 'Very Hot' ")
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Salary Calculation</title>
+</head>
+
+<body style="font-size: 50px; color: white; background-color: black;">
+
+    <script>
+        function calculateMonthlySalary(hoursWorked) {
+            let salary = 0;
+
+            if (hoursWorked <= 40) {
+                salary = hoursWorked * 15;
+            } else if (hoursWorked <= 60) {
+                salary = (40 * 15) + ((hoursWorked - 40) * 20);
+            } else {
+                salary = (40 * 15) + (20 * 20) + ((hoursWorked - 60) * 25);
+            }
+
+            return salary;
+        }
+
+        let hoursWorked = prompt("Enter The Monthly Salary =>");
+        let salary = calculateMonthlySalary(hoursWorked);
+        document.write("The monthly salary is: $" + salary);
+    </script>
+
+</body>
+
+</html>

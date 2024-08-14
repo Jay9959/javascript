@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Authenticatication</title>
+</head>
+
+
+<body>
+
+    <center>
+
+        <input id="currPass" type="text" placeholder="Enter your current password"> <br><br>
+        <input id="newPass" type="text" placeholder="Enter your new password"><br><br>
+        <input id="ConfirmPass" type="text" placeholder="Enter your confirm password"><br><br>
+        <button onclick="handleForm()"> Submit </button>
+
+    </center>
+
+</body>
+
+<script>
+
+    function handleForm() {
+
+        let oldPassword = "741852963"
+
+        let currentPass = document.querySelector("#currPass").value
+        let newPassword = document.querySelector("#newPass").value
+        let confirmPassword = document.querySelector("#ConfirmPass").value
+
+        document.write(currentPass, newPassword, confirmPassword)
+
+        if (oldPassword !== currentPass) {
+            document.write("your current password is incorrect")
+        } else {
+            if (newPassword !== confirmPassword) {
+                document.write("Password did not match, ")
+            } else {
+                document.write("Your password changed successfully")
+            }
+        }
+    }
+
+</script>
+
+
+</html>
